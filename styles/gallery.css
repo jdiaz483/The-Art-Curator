@@ -1,0 +1,141 @@
+/* Basic Page Styling*/
+body{
+  background-color: #ede8e6;
+  font-family: 'Open Sans',sans-serif;
+}
+
+a {
+  color: #ede8e6 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px !important;
+  cursor: pointer;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+
+/* Navbar / Header*/
+.navbar {
+  background-color: #313639;
+}
+
+.navbar .navbar-toggler {
+  color: #ede8e6;
+}
+
+/* Main Title*/
+
+#pageTitle {
+  text-transform: uppercase;
+  margin: 60px 0 40px;
+}
+
+/* Form Section*/
+#searchSection {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#searchSection input [type=text] {
+  border: none;
+  font-size: 20px;
+  margin-top: 8px;
+  padding: 6px;
+}
+
+#searchSection button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+  margin-top: -40px;
+  padding: 6px 10px;
+}
+
+/* Gallery Section*/
+.gallerySection {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin: 0 10px;
+}
+
+/* Wall Space */
+.wallSpace {
+  margin-bottom: 20px;
+  padding: 0 8px;
+  position: relative;
+}
+
+.gallerySection .wallSpace img {
+  width: 100%; 
+}
+
+.artworkTitle {
+  display: inline;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.creationDate {
+  display: inline;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+
+
+.artistInfo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.technique {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.creditLine {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.accessionNumber {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  
+}
+
+@media only screen and (min-width: 600px) {
+  
+}
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+@media only screen and (min-width: 992px) {
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  
+}
