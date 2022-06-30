@@ -2,13 +2,17 @@ const searchBar = document.getElementById("searchBar"); // Main Search Bar
 const searchButton = document.getElementById("searchSubmit"); // Magnifying Glass - Search
 const gallerySection = document.getElementById("gallerySection"); // Gallery Section 
 
+const imageURLStart =  "https://www.artic.edu/iiif/2/"
+const imageURLEnd = "/full/843,/0/default.jpg"
+
 const tombStone = (gallery) => {
     for (const artPiece of gallery) {
       if (artPiece.artist_display.length) {
+        const imageID = artPiece.image_id;
         const wallSpace = document.createElement("div");
         wallSpace.className = "wallSpace";
-        //const image = document.createElement("img");
-        //image.src = artPiece.;
+        const image = document.createElement("img");
+        image.src = `${imageURLStart + imageID + imageURLEnd}`;
         const title = document.createElement("h2");
         title.textContent = artPiece.title;
         title.className = "artworkTitle";
@@ -27,7 +31,7 @@ const tombStone = (gallery) => {
         const accessionNumber = document.createElement("h6");
         accessionNumber.textContent = artPiece.main_reference_number;
         accessionNumber.className = "accessionNumber";
-        //wallSpace.appendChild(image);
+        wallSpace.appendChild(image);
         wallSpace.appendChild(title);
         wallSpace.appendChild(creationDate);
         wallSpace.appendChild(artistInfo);

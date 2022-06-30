@@ -20,7 +20,7 @@ const tombStone = (gallery) => {
       artistInfo.className = "artistInfo";
       const medium = document.createElement("h4");
       medium.textContent = artPiece.technique;
-      medium.className = "technique";
+      medium.className = "medium";
       const creditLine = document.createElement("h5");
       creditLine.textContent = artPiece.creditline;
       creditLine.className = "creditLine";
