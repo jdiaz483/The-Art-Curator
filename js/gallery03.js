@@ -18,9 +18,9 @@ const tombStone = (gallery) => {
       const artistInfo = document.createElement("h3");
       artistInfo.innerHTML = artPiece.creators[0].description;
       artistInfo.className = "artistInfo";
-      const technique = document.createElement("h4");
-      technique.textContent = artPiece.technique;
-      technique.className = "technique";
+      const medium = document.createElement("h4");
+      medium.textContent = artPiece.medium;
+      medium.className = "medium";
       const creditLine = document.createElement("h5");
       creditLine.textContent = artPiece.creditline;
       creditLine.className = "creditLine";
@@ -31,7 +31,7 @@ const tombStone = (gallery) => {
       wallSpace.appendChild(title);
       wallSpace.appendChild(creationDate);
       wallSpace.appendChild(artistInfo);
-      wallSpace.appendChild(technique);
+      wallSpace.appendChild(medium);
       wallSpace.appendChild(creditLine);
       wallSpace.appendChild(accessionNumber);
       gallerySection.appendChild(wallSpace);
@@ -41,7 +41,7 @@ const tombStone = (gallery) => {
 
 // Function & Fetch with a limit of 50 pieces
 const galleryWall = () => {
-  const galleryURL = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&limit=100`;
+  const galleryURL = ``;
 
   fetch(galleryURL)
     .then((response) => response.json())
@@ -52,11 +52,11 @@ const galleryWall = () => {
 galleryWall();
 
 // Function & Fetch By Artist 
-const artByArtist = () => { 
-  const searchParam = searchBar.value;  // Parameter for the Artist in the API URL
-  const artistAPI = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&artists=${searchParam}&type=Painting`;
+const art = () => { 
+  //const searchParam = searchBar.value;  // Parameter for the Artist in the API URL
+  const artAPI = ``;
 
-  fetch(artistAPI)
+  fetch(artAPI)
     .then((response) => response.json())
     .then((artistArt) => {
       searchBar.value = "";
@@ -66,11 +66,11 @@ const artByArtist = () => {
 };
 
 //Even Listeners
-searchButton.addEventListener("click", artByArtist); // Magnifying Glass - Search 
+//searchButton.addEventListener("click", art); // Magnifying Glass - Search 
 
 searchBar.addEventListener("keyup", (e) => {  // Clearing / Reseting the Search Bar
   if (e.keyCode === 13) {
     e.preventDefault();
-    artByArtist();
+    art();
   }
 });
