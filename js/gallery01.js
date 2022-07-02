@@ -12,7 +12,7 @@ const tombStone = (gallery) => {
         const wallSpace = document.createElement("div");
         wallSpace.className = "wallSpace";
         const image = document.createElement("img");
-        image.src = `${imageURLStart + imageID + imageURLEnd}`;
+        image.src = imageURLStart + imageID + imageURLEnd;
         const title = document.createElement("h2");
         title.textContent = artPiece.title;
         title.className = "artworkTitle";
@@ -26,7 +26,7 @@ const tombStone = (gallery) => {
         medium.textContent = artPiece.medium_display;
         medium.className = "medium";
         const creditLine = document.createElement("h5");
-        creditLine.textContent = artPiece.creditline;
+        creditLine.textContent = artPiece.credit_line;
         creditLine.className = "creditLine";
         const accessionNumber = document.createElement("h6");
         accessionNumber.textContent = artPiece.main_reference_number;
