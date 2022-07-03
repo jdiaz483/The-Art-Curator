@@ -28,7 +28,7 @@ const tombStone = (gallery) => {
 };
 
 const galleryWall = () => {
-    const galleryURL = `https://api.smk.dk/api/v1/art/search?keys=*&qfields=titles&filters=[has_image:true],[object_names:painting],[public_domain:true]&offset=0&rows=60&lang=en`;
+    const galleryURL = `https://api.smk.dk/api/v1/art/search?keys=*&qfields=titles&filters=[has_image:true],[object_names:painting],[public_domain:true]&offset=0&rows=80&lang=en`;
     
     fetch(galleryURL)
     .then((response) => response.json())
@@ -42,7 +42,7 @@ galleryWall();
 
 const art = () => { 
     const searchParam = searchBar.value;  
-    const artAPI = `https://api.smk.dk/api/v1/art/search?keys=${searchParam}&qfields=titles&filters=[has_image:true],[object_names:painting],[public_domain:true]&offset=0&rows=60&lang=en`;
+    const artAPI = `https://api.smk.dk/api/v1/art/search?keys=${searchParam}&q&filters=[has_image:true],[object_names:painting],[public_domain:true]&offset=0&rows=40&lang=en`;
   
     fetch(artAPI)
       .then((response) => response.json())

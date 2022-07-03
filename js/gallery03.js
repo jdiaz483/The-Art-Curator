@@ -1,6 +1,6 @@
-const searchBar = document.getElementById("searchBar"); // Main Search Bar
-const searchButton = document.getElementById("searchSubmit"); // Magnifying Glass - Search
-const gallerySection = document.getElementById("gallerySection"); // Gallery Section 
+const searchBar = document.getElementById("searchBar"); 
+const searchButton = document.getElementById("searchSubmit");
+const gallerySection = document.getElementById("gallerySection");
 
 const tombStone = (gallery) => {
     for (const artPiece of gallery) {
@@ -25,12 +25,10 @@ const tombStone = (gallery) => {
             gallerySection.appendChild(wallSpace);
         };
     };
-
 };
 
-// Function & Fetch with a limit of 50 pieces 
 const galleryWall = () => {
-    const galleryURL = `https://www.rijksmuseum.nl/api/en/collection?key=KIfNKQsl&imgonly=True&toppieces=True&type=painting&culture=en&ps=50`;
+    const galleryURL = `https://www.rijksmuseum.nl/api/en/collection?key=KIfNKQsl&imgonly=True&toppieces=True&type=painting&culture=en&ps=80`;
 
     fetch(galleryURL)
     .then((response) => response.json())
@@ -41,10 +39,10 @@ const galleryWall = () => {
 
 galleryWall();
 
-//Function & Fetch for when you Search 
+
 const art = () => {
     const searchParam = searchBar.value; 
-    const artAPI = `https://www.rijksmuseum.nl/api/en/collection?key=KIfNKQsl&imgonly=True&type=painting&culture=en&ps=50&q=${searchParam}`;
+    const artAPI = `https://www.rijksmuseum.nl/api/en/collection?key=KIfNKQsl&imgonly=True&type=painting&culture=en&ps=40&q=${searchParam}`;
     
     fetch(artAPI)
     .then((response) => response.json())
@@ -53,13 +51,12 @@ const art = () => {
       gallerySection.innerHTML = "";
       tombStone(art.artObjects);
     });
-
 };
 
-//Even Listeners
-searchButton.addEventListener("click", art); // Magnifying Glass - Search 
 
-searchBar.addEventListener("keyup", (e) => {  // Clearing / Reseting the Search Bar
+searchButton.addEventListener("click", art); 
+
+searchBar.addEventListener("keyup", (e) => {  
   if (e.keyCode === 13) {
     e.preventDefault();
     art();

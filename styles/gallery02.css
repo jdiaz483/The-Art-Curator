@@ -76,7 +76,7 @@ a:hover {
   width: 100%; 
 }
 
-.artworkTitle {
+.title {
   display: inline;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -93,49 +93,8 @@ a:hover {
   margin-left: 5px;
 }
 
-
-.artistInfo {
+.artist {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   margin-bottom: 2px;
-}
-.medium {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  font-style: italic;
-  margin-bottom: 15px;
-  text-transform: capitalize;
-}
-
-.creditLine {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  margin-bottom: 2px;
-}
-
-.accessionNumber {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-  
-}
-
-@media only screen and (min-width: 600px) {
-  
-}
-
-@media only screen and (min-width: 768px) {
-  
-}
-
-@media only screen and (min-width: 992px) {
-  
-}
-
-@media only screen and (min-width: 1200px) {
-  
 }

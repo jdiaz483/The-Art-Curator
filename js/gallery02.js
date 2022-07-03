@@ -1,6 +1,6 @@
-const searchBar = document.getElementById("searchBar"); // Main Search Bar
-const searchButton = document.getElementById("searchSubmit"); // Magnifying Glass - Search
-const gallerySection = document.getElementById("gallerySection"); // Gallery Section 
+const searchBar = document.getElementById("searchBar");
+const searchButton = document.getElementById("searchSubmit"); 
+const gallerySection = document.getElementById("gallerySection"); 
 
 const tombStone = (gallery) => {
   for (const artPiece of gallery) {
@@ -11,26 +11,24 @@ const tombStone = (gallery) => {
       image.src = artPiece.images.web.url;
       const title = document.createElement("h2");
       title.textContent = artPiece.title;
-      title.className = "artworkTitle";
+      title.className = "title";
       const creationDate = document.createElement("h2");
       creationDate.textContent = `, ${artPiece.creation_date}`;
       creationDate.className = "creationDate";
-      const artistInfo = document.createElement("h3");
-      artistInfo.innerHTML = artPiece.creators[0].description;
-      artistInfo.className = "artistInfo";
-
+      const artist = document.createElement("h3");
+      artist.innerHTML = artPiece.creators[0].description;
+      artist.className = "artist";
       wallSpace.appendChild(image);
       wallSpace.appendChild(title);
       wallSpace.appendChild(creationDate);
-      wallSpace.appendChild(artistInfo);
+      wallSpace.appendChild(artist);
       gallerySection.appendChild(wallSpace);
     };
   };
 };
 
-// Function & Fetch with a limit of 50 pieces
 const galleryWall = () => {
-  const galleryURL = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&limit=100`;
+  const galleryURL = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&limit=80`;
 
   fetch(galleryURL)
     .then((response) => response.json())
@@ -38,12 +36,13 @@ const galleryWall = () => {
       tombStone(gallery.data);
     });
 };
+
 galleryWall();
 
-// Function & Fetch By Artist 
+
 const art = () => { 
-  const searchParam = searchBar.value;  // Parameter for the Artist in the API URL
-  const artAPI = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&q=${searchParam}&limit=100`;
+  const searchParam = searchBar.value; 
+  const artAPI = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&q=${searchParam}&limit=40`;
 
   fetch(artAPI)
     .then((response) => response.json())
@@ -54,10 +53,10 @@ const art = () => {
     });
 };
 
-//Even Listeners
-searchButton.addEventListener("click", art); // Magnifying Glass - Search 
 
-searchBar.addEventListener("keyup", (e) => {  // Clearing / Reseting the Search Bar
+searchButton.addEventListener("click", art); 
+
+searchBar.addEventListener("keyup", (e) => {  
   if (e.keyCode === 13) {
     e.preventDefault();
     art();
