@@ -18,22 +18,11 @@ const tombStone = (gallery) => {
       const artistInfo = document.createElement("h3");
       artistInfo.innerHTML = artPiece.creators[0].description;
       artistInfo.className = "artistInfo";
-      const medium = document.createElement("h4");
-      medium.textContent = artPiece.technique;
-      medium.className = "medium";
-      const creditLine = document.createElement("h5");
-      creditLine.textContent = artPiece.creditline;
-      creditLine.className = "creditLine";
-      const accessionNumber = document.createElement("h6");
-      accessionNumber.textContent = artPiece.accession_number;
-      accessionNumber.className = "accessionNumber";
+
       wallSpace.appendChild(image);
       wallSpace.appendChild(title);
       wallSpace.appendChild(creationDate);
       wallSpace.appendChild(artistInfo);
-      wallSpace.appendChild(medium);
-      wallSpace.appendChild(creditLine);
-      wallSpace.appendChild(accessionNumber);
       gallerySection.appendChild(wallSpace);
     };
   };
@@ -58,10 +47,10 @@ const art = () => {
 
   fetch(artAPI)
     .then((response) => response.json())
-    .then((artistArt) => {
+    .then((art) => {
       searchBar.value = "";
       gallerySection.innerHTML = "";
-      tombStone(artistArt.data);
+      tombStone(art.data);
     });
 };
 
