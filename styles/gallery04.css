@@ -20,7 +20,7 @@ body{
   
   /* Navbar / Header*/
   .navbar {
-    background-color: #b50a38;
+    background-color: #314750;
   }
   
   .navbar .navbar-toggler {
@@ -93,10 +93,8 @@ body{
   margin-left: 5px;
 }
 
-.artistInfo {
+.artist {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   margin-bottom: 2px;
 }
-
-  
