@@ -11,7 +11,7 @@ const tombStone = (gallery) => {
       image.src = artPiece.image_thumbnail;
       const title = document.createElement("h2");
       title.textContent = artPiece.titles[0].title;
-      title.className = "artworkTitle";
+      title.className = "title";
       const creationDate = document.createElement("h2");
       creationDate.textContent = `, c. ${artPiece.production_date[0].period}`;
       creationDate.className = "creationDate";

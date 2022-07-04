@@ -71,26 +71,32 @@ body{
     padding: 6px 10px;
   }
 
-  /* Gallery Section*/
-.gallerySection {
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  margin: 0 10px;
-}
+  .gallerySection {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap:8px;
+    margin: 0 10px;
+  }
+  
+  .wallSpace {
+    margin-bottom: 20px;
+    padding: 0 8px;
+    position: relative;
+  }
+  
+  .gallerySection .wallSpace img {
+    width: 100%; 
+    cursor: pointer;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .gallerySection .wallSpace img:hover {
+    transform: scale(1.1);
+  }
 
-/* Wall Space */
-.wallSpace {
-  margin-bottom: 20px;
-  padding: 0 8px;
-  position: relative;
-}
-
-.gallerySection .wallSpace img {
-  width: 100%; 
-}
-
-.artworkTitle {
+.title {
   display: inline;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;

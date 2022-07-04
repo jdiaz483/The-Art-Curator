@@ -76,10 +76,10 @@ body{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  margin: 0 !important;
+  grid-gap:8px;
+  margin: 0 10px;
 }
 
-/* Wall Space */
 .wallSpace {
   margin-bottom: 20px;
   padding: 0 8px;
@@ -88,6 +88,13 @@ body{
 
 .gallerySection .wallSpace img {
   width: 100%; 
+  cursor: pointer;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+.gallerySection .wallSpace img:hover {
+  transform: scale(1.1);
 }
 
 .title {
