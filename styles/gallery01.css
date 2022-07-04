@@ -18,30 +18,7 @@ body{
     justify-content: center;
     padding: 20px 0px 60px 0px;
   }
-  
-  a {
-    color: #f5f5f5 !important;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px !important;
-    cursor: pointer;
-    outline: none !important;
-    text-decoration: none !important;
-  }
-  
-  a:hover {
-    text-decoration: underline !important;
-  }
-  
-  
-  /* Navbar / Header*/
-  .navbar {
-    background-color: #313639;
-  }
-  
-  .navbar .navbar-toggler {
-    color: #f5f5f5;
-  }
-  
+
   /* Main Title*/
   
   #pageTitle {
@@ -90,7 +67,7 @@ body{
   width: 100%; 
   cursor: pointer;
   object-fit: cover;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .gallerySection .wallSpace img:hover {
