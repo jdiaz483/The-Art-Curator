@@ -5,6 +5,8 @@ const gallerySection = document.getElementById("gallerySection");
 const imageURLStart =  "https://www.artic.edu/iiif/2/"
 const imageURLEnd = "/full/843,/0/default.jpg"
 
+
+
 const tombStone = (gallery) => {
     for (const artPiece of gallery) {
       if (artPiece.artist_display.length) {
@@ -30,6 +32,7 @@ const tombStone = (gallery) => {
       };
     };
   };
+
 
 const galleryWall = () => {
     const galleryURL = `https://api.artic.edu/api/v1/artworks/search?=painting&fields=id,title,artist_display,date_display,medium_display,credit_line,main_reference_number,image_id&limit=80`;
