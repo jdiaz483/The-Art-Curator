@@ -18,6 +18,11 @@ body{
     --navbar-bg-contrast: #363036;
   }
 
+  p {
+    margin: 5px;
+    text-align: center;
+  }
+
   .conatiner01 {
     max-width: 100%;
     padding: 5px;
@@ -148,7 +153,7 @@ body{
 
   #pageTitle {
     text-transform: uppercase;
-    margin: 60px 0 40px;
+    margin: 60px 0 30px;
   }
   
   #searchSection {
@@ -315,7 +320,7 @@ body{
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #navbar-menu {
-    bottom: 80%;
+    bottom: 82%;
   }
 
   .container02 {

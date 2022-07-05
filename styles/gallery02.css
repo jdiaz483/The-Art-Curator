@@ -313,7 +313,7 @@ body{
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #navbar-menu {
-    bottom: 80%;
+    bottom: 85%;
   }
 
   .container02 {

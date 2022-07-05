@@ -33,7 +33,9 @@ const tombStone = (gallery) => {
             title.textContent = artPiece.title;
             title.className = "title"
             const creationDate = document.createElement("h2");
-            creationDate.textContent = artPiece.longTitle;
+            const longTitleArray = artPiece.longTitle.split('').reverse().join('').split(',');
+            const date = longTitleArray[0].split('').reverse().join('');
+            creationDate.textContent = `, ${date}`;
             creationDate.className = "creationDate";
             const artist = document.createElement("h2");
             artist.textContent = artPiece.principalOrFirstMaker;

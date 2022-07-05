@@ -1,4 +1,5 @@
 const img = document.getElementById("img");
+
 const imgArray = [
     "images/01JohnBaptist.jpg",
     "images/02Rembrandt.jpg",
@@ -9,6 +10,7 @@ const imgArray = [
     "images/07Munch.jpg",
     "images/08Hopper.jpeg"
 ];
+
 let imgIndex = 0;
 
 function slideShow() {
