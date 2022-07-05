@@ -1,5 +1,4 @@
-// Navbar Stuff 
-
+// Navbar 
 const navbarToggle = navbar.querySelector('#navbar-toggle');
 let isNavbarExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
 
@@ -16,7 +15,7 @@ const navbarLinksContainer = navbarMenu.querySelector('.navbar-links');
 navbarLinksContainer.addEventListener('click', (e) => e.stopPropagation());
 navbarMenu.addEventListener('click', toggleNavbarVisibility);
 
-// Main Stuff 
+// Main 
 const searchBar = document.getElementById("searchBar");
 const searchButton = document.getElementById("searchSubmit"); 
 const gallerySection = document.getElementById("gallerySection"); 
@@ -28,6 +27,8 @@ const tombStone = (gallery) => {
       wallSpace.className = "wallSpace";
       const image = document.createElement("img");
       image.src = artPiece.images.web.url;
+      image.className = "artImage";
+      image.setAttribute('id', 'artImage');
       const title = document.createElement("h2");
       title.textContent = artPiece.title;
       title.className = "title";
@@ -58,7 +59,6 @@ const galleryWall = () => {
 
 galleryWall();
 
-
 const art = () => { 
   const searchParam = searchBar.value; 
   const artAPI = `https://openaccess-api.clevelandart.org/api/artworks/?has_image=1&q=${searchParam}&limit=40`;
@@ -72,6 +72,23 @@ const art = () => {
     });
 };
 
+const modal = document.getElementById("artModal");
+
+const modalImg = document.getElementById("modalImage");
+
+document.addEventListener("click", (e) => {
+  const elem = e.target;
+  if (elem.id==="artImage") {
+    modal.style.display = "block";
+    modalImg.src = elem.dataset.biggerSrc || elem.src;
+  };
+});
+
+const span = document.getElementsByClassName("close") [0];
+
+span.onclick = () => {
+  modal.style.display = "none";
+};
 
 searchButton.addEventListener("click", art); 
 

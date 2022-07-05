@@ -221,7 +221,59 @@ body{
   margin-bottom: 2px;
 }
 
-@media (max-width: 600px) { 
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modalContent {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
   .gallerySection {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -240,8 +292,26 @@ body{
   }
 }
 
+@media only screen and (min-width: 601px) and (max-width: 767px) { 
+  .gallerySection {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-@media (min-width: 768px) {
+  .container02 {
+    padding: 10px 0px 10px 0px;
+  }  
+
+  #pageTitle {
+    margin: 15px 0 10px;
+    text-align: center;
+  }
+
+  #searchSection {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   #navbar-menu {
     bottom: 80%;
   }
@@ -264,7 +334,7 @@ body{
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 960px) and (max-width: 1999px) {
   #navbar-toggle {
     display: none;
   }

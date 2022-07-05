@@ -35,38 +35,42 @@
   <body>
     <!--Navbar-->
     <header id="navbar">
-        <nav class="navbar-container conatiner01">
-          <a href="index.html" class="home-link">
-            <img src="images/logo01.png" height="55">
-          </a>
-  
-          <button
-            type="button"
-            id="navbar-toggle"
-            aria-controls="navbar-menu"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-  
-          <div id="navbar-menu" aria-labelledby="navbar-toggle">
-            <ul class="navbar-links">
-              <li class="navbar-item">
-                <a class="navbar-link" href="gallery01.html">The Art Institute of Chicago</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="gallery03.html">The Rijksmuseum</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="gallery04.html">The National Gallery of Denmark</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <nav class="navbar-container conatiner01">
+        <a href="index.html" class="home-link">
+          <img src="images/logo01.png" height="55" />
+        </a>
+
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item">
+              <a class="navbar-link" href="gallery01.html"
+                >The Art Institute of Chicago</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="gallery03.html">The Rijksmuseum</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="gallery04.html"
+                >The National Gallery of Denmark</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!--Main Container-->
     <div class="container02">
@@ -88,6 +92,12 @@
     </div>
 
     <div id="gallerySection" class="gallerySection"></div>
+
+    <!--Modal-->
+    <div id="artModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modalContent" id="modalImage" />
+    </div>
 
     <!--Bootstrap JavaScript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
