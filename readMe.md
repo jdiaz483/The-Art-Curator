@@ -1,6 +1,6 @@
 <img src="images/logo-README.png">
 
-<h2>Summary</2>
+<h2>Summary</h2>
 
   - [About the Project](#about-the-project)
   - [Usage](#usage)
