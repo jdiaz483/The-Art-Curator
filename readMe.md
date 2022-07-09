@@ -1,6 +1,15 @@
-# The Art Curator 
+<img src="images/logo-README.png">
 
-## About The Project:
+<h2>Summary</2>
+
+  - [About the Project](#about-the-project)
+  - [Usage](#usage)
+  - [Videos & Screenshots](#videos-and-screenshots)
+  - [Built With](#built-with)
+  - [Authors](#authors)
+  - [Acknowledgments](#acknowledgments)
+
+<h2>About The Project</2>
 
 The project houses the collection of four different museums;
 - The Art Institute of Chicago in Chicago, IL, USA
@@ -22,8 +31,7 @@ The Art Curator was built with:
 - Bootstrap
 - Font Awesome
 
-Author:
-Joselyn Diaz
+Author: Joselyn Diaz
 
 
 
