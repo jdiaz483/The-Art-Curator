@@ -1,4 +1,4 @@
-<img src="images/logo-README.png">
+<img src="images/README-IMG/logo.png">
 
 <h2>Summary</h2>
 
@@ -14,6 +14,13 @@
 ## Usage 
 
 ## Videos & Screenshots
+<img src="images/README-IMG/RDIMG01.png">
+
+<img src="images/README-IMG/RDIMG02.png">
+
+<img src="images/README-IMG/RDIMG03.png">
+
+<img src="images/README-IMG/RDIMG04.png">
 
 ## Built With 
   - [Javascript](https://www.javascript.com/)
