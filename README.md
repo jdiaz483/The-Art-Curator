@@ -14,13 +14,13 @@
 ## Usage 
 
 ## Videos & Screenshots
+<img src="images/README-IMG/RDGIF01.gif">
 <img src="images/README-IMG/RDIMG01.png">
-
 <img src="images/README-IMG/RDIMG02.png">
+<img src="images/README-IMG/RDGIF03.gif">
+<img src="images/README-IMG/RDGIF02.gif">
 
-<img src="images/README-IMG/RDIMG03.png">
 
-<img src="images/README-IMG/RDIMG04.png">
 
 ## Built With 
   - [Javascript](https://www.javascript.com/)
