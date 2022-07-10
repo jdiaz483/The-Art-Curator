@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #004750;
+  background-color: #212322;
 }
 
 #logo {
@@ -40,6 +40,7 @@ body {
   width: 50%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 }
 
 
@@ -72,7 +73,7 @@ body {
     padding-top: 15px;
     display: block;
     margin: auto;
-    width: 80%;
+    width: 60%;
   }
   
   #img {
@@ -98,23 +99,23 @@ body {
     padding-top: 15px;
     display: block;
     margin: auto;
-    width: 80%;
+    width: 60%;
   }
   
   #img {
     width: 80%; 
-    height: 80%;
+    height: 50%;
     display: block;
     margin: auto;
     margin-bottom: 10px;
   }
 
   .dropbtn {
-    width: 80%;
+    width: 60%;
   }
 
   .dropdown-content {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -123,23 +124,23 @@ body {
     padding-top: 15px;
     display: block;
     margin: auto;
-    width: 70%;
+    width: 60%;
   }
   
   #img {
-    width: 70%; 
-    height: 70%;
+    width: 80%; 
+    height: 50%;
     display: block;
     margin: auto;
     margin-bottom: 10px;
   }
 
   .dropbtn {
-    width: 70%;
+    width: 60%;
   }
 
   .dropdown-content {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -149,12 +150,12 @@ body {
     padding-top: 15px;
     display: block;
     margin: auto;
-    width: 70%;
+    width: 60%;
   }
   
   #img {
-    width: 70%; 
-    height: 70%;
+    width: 80%; 
+    height: 50%;
     display: block;
     margin: auto;
     margin-bottom: 10px;
@@ -176,10 +177,11 @@ body {
     margin: auto;
     width: 60%;
   }
+
   
   #img {
-    width: 60%; 
-    height: 60%;
+    width: 70%; 
+    height: 40%;
     display: block;
     margin: auto;
     margin-bottom: 10px;
